@@ -1,0 +1,2 @@
+# UselessLibrary
+my inutile library
