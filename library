@@ -1,0 +1,120 @@
+function say(x) {
+  console.log(x);
+}
+function SpellItOut(text){
+  
+  for (let i = 0; i < text.length; i++) {
+    setTimeout(() => {
+      say(text[i]);
+    }, i * 3000); 
+  }
+}
+function ignorantOperation(n){
+  say("this will most definitely make your number random");
+  initialN = n;
+  n += 17;
+  n *= 63;
+  n -= 16;
+  n = n * Math.random();
+  n = Math.floor(n);
+  for(i = 0;i < initialN;i++){
+    n++
+  }
+  say("Your number now became this: " + n);
+}
+function greetings(response){
+  if(response === "no"){
+    say("ok then,get out!!!");
+  }
+  else if(response === "yes"){
+    say("I didn't even start yet");
+  }
+  else if(response === "frop_123"){
+    say("Now I can introduce for you the real website.Put in Start() ignorantOperation,SpellItOut or just simply say.For the second parameter,put anything in say,put an array with each letter placed in it's value in SpellItOut and put integers in ignorantOperation.");
+  }
+  else{
+    say("Meow");
+  }
+}
+function Start(func,para,para2){
+  func(para,para2);
+}
+function GetFirstValue(text,text2){
+  let newtext = "";
+  newtext = newtext + text[0];
+  newtext = newtext + text2[0];
+  console.log(newtext);
+}
+function AreaTriangle(base,height){
+  console.log((base*height)/2);
+}
+function Squared(a){
+  console.log(a*a);
+}
+function addUp(n){
+  initN = n;
+  for(i = 0;i < initN;i++){
+    n += i;
+  }
+  console.log(n);
+}
+function weirdGame(x,y){
+  for(i = 0;i < y.length;i++){
+    if(x[i] !== y[i]){
+      console.log(-1);
+    }
+    else{
+      console.log(1);
+    }
+  }
+}
+function HigherFunctionStart(func, para, para2, para3, para4, para5, para6, para7) {
+  if (typeof func === "function") {
+    func(para, para2, para3, para4, para5, para6, para7);
+  } else {
+    console.error("Error: func is not a function");
+  }
+}
+function HighOrderOperation(n,n1,n2,n3,n4){
+  console.log(n-n1 * n3 / n2 + n4 * n4);
+}
+function perfectRoots(n){
+  if(Number.isInteger(Math.pow(n, 1/2))){
+    if(Number.isInteger(Math.pow(n, 1/4))){
+      if(Number.isInteger(Math.pow(n, 1/8))){
+        return true;
+      }
+      else{
+        return false;
+      }
+    }
+    else{
+      return false;
+    }
+  }
+  else{
+    return false;
+  }
+}
+function onoroff(n){
+  return Math.pow(2, n);
+}
+function Impasta(i,p){
+  return 100 * (i/p);
+}
+function money(n){
+  return "needs: " + n/2 + ", wants: " + n/10*3 + ", savings: " + n/10*2;
+}
+function customizableMoney(n, n1, n2, n3, para = "needs", para1 = "wants", para2 = "savings"){
+  n1 /= 100;
+  n2 /= 100;
+  n3 /= 100;
+  return `${para}: ` + n*n1 + `$, ${para1}: ` + n*n2 + `$, ${para2}: ` + n*n3 + "$";
+}
+function tetration(n,t){
+  initN = n;
+  for(ite = 0;I=ite < t;ite++){
+    n = Math.pow(initN,n);
+  }
+  return n;
+}
