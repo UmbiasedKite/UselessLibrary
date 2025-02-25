@@ -1,0 +1,124 @@
+let uselessLibrary = {
+  say: function say(x) {
+    console.log(x);
+  },
+  SpellItOut: function SpellItOut(text){
+  
+    for (let i = 0; i < text.length; i++) {
+      setTimeout(() => {
+        uselessLibrary.say(text[i]);
+      }, i * 3000); 
+    }
+  },
+  ignorantOperation: function ignorantOperation(n){
+    uselessLibrary.say("this will most definitely make your number random");
+    let initialN = n;
+    n += 17;
+    n *= 63;
+    n -= 16;
+    n = n * Math.random();
+    n = Math.floor(n);
+    for(let i = 0;i < initialN;i++){
+      n++
+    }
+    uselessLibrary.say("Your number now became this: " + n);
+  },
+  greetings: function greetings(response){
+    if(response === "no"){
+      uselessLibrary.say("ok then,get out!!!");
+    }
+    else if(response === "yes"){
+      uselessLibrary.say("I didn't even start yet");
+    }
+    else if(response === "frop_123"){
+      uselessLibrary.say("Now I can introduce for you the real website.Put in Start() ignorantOperation,SpellItOut or just simply say.For the second parameter,put anything in say,put an array with each letter placed in it's value in SpellItOut and put integers in ignorantOperation.");
+    }
+    else{
+      uselessLibrary.say("Meow");
+    }
+  },
+  start: function Start(func,para,para2){
+    func(para,para2);
+  },
+  GetFirstValue: function GetFirstValue(text,text2){
+    let newtext = "";
+    newtext = newtext + text[0];
+    newtext = newtext + text2[0];
+    console.log(newtext);
+  },
+  AreaTriangle: function AreaTriangle(base,height){
+    console.log((base*height)/2);
+  },
+  Squared: function Squared(a){
+    console.log(a*a);
+  },
+  addUp: function addUp(n){
+    initN = n;
+    for(i = 0;i < initN;i++){
+      n += i;
+    }
+    console.log(n);
+  },
+  weirdGame: function weirdGame(x,y){
+    for(i = 0;i < y.length;i++){
+      if(x[i] !== y[i]){
+        console.log(-1);
+      }
+      else{
+        console.log(1);
+      }
+    }
+  },
+  HigherFunctionStart: function HigherFunctionStart(func, para, para2, para3, para4, para5, para6, para7) {
+    if (typeof func === "function") {
+      func(para, para2, para3, para4, para5, para6, para7);
+    } 
+    else{
+      console.error("Error: func is not a function");
+    }
+  },
+  HighOrderOperation: function HighOrderOperation(n,n1,n2,n3,n4){
+    console.log(n-n1 * n3 / n2 + n4 * n4);
+  },
+  perfectRoots:function perfectRoots(n){
+    if(Number.isInteger(Math.pow(n, 1/2))){
+      if(Number.isInteger(Math.pow(n, 1/4))){
+        if(Number.isInteger(Math.pow(n, 1/8))){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+      else{
+        return false;
+      }
+    }
+    else{
+      return false;
+    }
+  },
+  onoroff: function onoroff(n){
+    return Math.pow(2, n);
+  },
+  Impasta: function Impasta(i,p){
+    return 100 * (i/p);
+  },
+  money:function money(n){
+    return "needs: " + n/2 + ", wants: " + n/10*3 + ", savings: " + n/10*2;
+  },
+  customizableMoney: function customizableMoney(n, n1, n2, n3, para = "needs", para1 = "wants", para2 = "savings"){
+    n1 /= 100;
+    n2 /= 100;
+    n3 /= 100;
+    return `${para}: ` + n*n1 + `$, ${para1}: ` + n*n2 + `$, ${para2}: ` + n*n3 + "$";
+  },
+  tetration: function tetration(n,t){
+    let initN = n;
+    for(let ite = 0;ite < t;ite++){
+      n = Math.pow(initN,n);
+    }
+    return n;
+  }
+}
+uselessLibrary.ignorantOperation(4);
